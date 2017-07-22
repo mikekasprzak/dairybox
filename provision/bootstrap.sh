@@ -66,14 +66,15 @@ if [ ! -d "/vagrant/dev/phpmyadmin" ]; then
 fi
 
 # NodeJS dependencies
-NPM_INSTALL_ARGS=
+#NPM_INSTALL_ARGS=
 #if [ -n "$WINDOWS_HOST" ]
 #then
 #	# NOTE: --no-bin-links doesn't actually help. Run your shell as an administrator instead. Symlinks will work then.
 #	NPM_INSTALL_ARGS=--no-bin-links
 #fi
 
-cd /vagrant/www/ && npm install $NPM_INSTALL_ARGS
+#cd /vagrant/www/src/config && npm install $NPM_INSTALL_ARGS -g
+cd /vagrant/provision && ./bootstrap_node.sh
 #npm install $NPM_INSTALL_ARGS -g svgo less clean-css-cli buble rollup uglify-js eslint
 
 
